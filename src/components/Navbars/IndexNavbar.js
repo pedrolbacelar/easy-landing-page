@@ -170,21 +170,22 @@ export default function IndexNavbar() {
                 Conheça a Equipe
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
+                <DropdownItem >
                   <i className="tim-icons icon-single-02" />
-                  Bateria
+                  Gabriel Gelli Checchinato – 10774163
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/register-page">
+                <DropdownItem >
                   <i className="tim-icons icon-single-02" />
-                  Gelli
+                  Gabriel Ribeiro de Carvalho – 11258141
                 </DropdownItem>
-                <DropdownItem href="https://teamtrees.org/">
+                <DropdownItem >
                   <i className="tim-icons icon-single-02" />
-                  Pedro
+                  Pedro Luis Bacelar dos Santos – 11258075
                 </DropdownItem>
-                <DropdownItem href="https://teamseas.org/">
+                <DropdownItem >
                   <i className="tim-icons icon-single-02" />
-                  Vini
+                  Vinicius Hideki Inomata – 10722112
+
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -193,7 +194,7 @@ export default function IndexNavbar() {
                 className="nav-link d-none d-lg-block"
                 color="primary"
                 target="_blank"
-                href="http://127.0.0.1:8000/"
+                href="https://easy-iot-si.herokuapp.com/"
               >
                 <i className="tim-icons icon-spaceship" /> Acessar Plataformar
               </Button>

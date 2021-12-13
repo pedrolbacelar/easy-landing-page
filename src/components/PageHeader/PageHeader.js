@@ -25,19 +25,30 @@ import { Container } from "reactstrap";
 class PageHeader extends Component{
   state={
     devices: [],
+    types: [], 
+    events: [],
   }
 
   async componentDidMount(){
-    const response = await api.get('api_devices/devices/');
+    const response_devices = await api.get('api_devices/devices/');
+    const response_types = await api.get('api_types/types/');
+    const response_events = await api.get('api_events/events/');
 
-  console.log(response.data);
 
-  this.setState({ devices: response.data});
+  console.log(response_devices.data);
+  console.log(response_types.data);
+  console.log(response_events.data);
+
+  this.setState({ devices: response_devices.data});
+  this.setState({ types: response_types.data});
+  this.setState({ events: response_events.data});
   }
 
   render(){
 
     const { devices } = this.state;
+    const { types } = this.state;
+    const { events } = this.state;
 
     return(
     <div className="page-header header-filter">
@@ -52,9 +63,11 @@ class PageHeader extends Component{
         <div className="content-center brand">
           <h1 className="h1-seo">Easy IoT</h1>
           <h3 className="d-none d-sm-block">
-           Essa é uma plataforma IoT para ser fácil
+           Acompanhe o Crescimento da Plataforma em Tempo Real!
           </h3>
-          <h3>Total de Objetos: {Object.keys(devices).length}</h3>
+          <h2 className="d-none d-sm-block">Total de TIPOS de Dispositivos: {Object.keys(types).length}</h2>
+          <h2 className="d-none d-sm-block">Total de DISPOSITIVOS: {Object.keys(devices).length}</h2>
+          <h2 className="d-none d-sm-block">Total de MENSAGENS já Recebidas: {Object.keys(events).length}</h2>
 
         </div>
       </Container>
